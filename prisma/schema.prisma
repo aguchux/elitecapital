@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Settings {
+  id               Int     @id @default(autoincrement())
+  siteUrl          String? @default("http://localhost:3000/")
+  siteName         String? @default("Elite Capital Funding Group LLC")
+  siteEmail        String? @default("info@elitecapital.com")
+  siteFirstMobile  String? @default("1-484-558-0162")
+  siteSecondMobile String? @default("1-484-750-5611")
+  siteAddress      String? @default("4, Rexdale Blvd Etobicoke ON M9W 1N6, Canada")
+  siteLogo         String? @default("/images/logo.png")
+  siteTitle        String? @default("Elite Capital Funding Group LLC")
+  siteFooterTitle  String? @default("Elite Capital Funding Group LLC is a loan, investment, and venture capital firm that provides funding options for businesses and individuals.")
+  siteDescription  String? @default("Elite Capital Funding Group LLC is a loan, investment, and venture capital firm that provides funding options for businesses and individuals. Contact us today to learn more about our flexible repayment terms and competitive interest rates.")
+  siteKeywords     String? @default("business loans, personal loans, investment services, venture capital funding, loan options, flexible repayment terms, competitive interest rates, SBA loans, commercial real estate loans, equipment financing, merchant cash advances, personal lines of credit, installment loans, payday loans, stocks, bonds, mutual funds, investment strategies, portfolio management, entrepreneurship, startup funding, experienced advisors")
+  siteFacebook     String? @default("#")
+  siteTwitter      String? @default("#")
+  siteInstagram    String? @default("#")
+  siteLinkedin     String? @default("#")
+  siteYouTubeVideo String? @default("C_sOMVv93-E")
+}

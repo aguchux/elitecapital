@@ -1,0 +1,107 @@
+<%- include('../layouts/header') %>
+
+<section class="service-details pt-20 pb-120">
+  <div class="container">
+    <div class="row row-gutter-y-30">
+      <div class="col-lg-4">
+        <div class="service-sidebar">
+          <!-- /.service-sidebar__item -->
+          <div class="service-sidebar__item service-sidebar__item--contact">
+            <div
+              class="service-sidebar__bg"
+              style="
+                background-image: url(assets/images/services/service-s-1-1.png);
+              "
+            ></div>
+            <!-- /.service-sidebar__bg -->
+            <div class="service-sidebar__contact">
+              <div class="service-sidebar__icon">
+                <i class="icon-phone-ringing"></i>
+              </div>
+              <!-- /.service-sidebar__icon -->
+              <h3 class="service-sidebar__title">Quick loan proccess</h3>
+              <!-- /.service-sidebar__title -->
+              <hr class="service-sidebar__separator" />
+              <p class="service-sidebar__tagline">Talk to an expert</p>
+              <!-- /.service-sidebar__tagline -->
+              <a
+                class="service-sidebar__phone"
+                href="tel:<%= settings.siteFirstMobile %>"
+                ><%= settings.siteFirstMobile %></a
+              >
+            </div>
+            <!-- /.service-sidebar__contact -->
+          </div>
+          <!-- /.service-sidebar__item -->
+        </div>
+        <!-- /.service-sidebar -->
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="col-lg-8">
+        <!-- /.service-details__image -->
+        <div class="service-details__content pt-20">
+          <div class="block-title text-left mb-3">
+            <p class="block-title__tagline"><%= title %></p>
+            <!-- /.block-title__tagline -->
+            <h2 class="block-title__title">Advisory Services</h2>
+            <!-- /.block-title__title -->
+          </div>
+          <!-- /.service-details__title -->
+
+          <p>
+            As a leading provider of financial services, we offer a range of
+            advisory services to help our clients achieve their financial goals
+            and grow their businesses.
+          </p>
+
+          <h2 class="my-2">Our Advisory Services</h2>
+          <p>
+            Our team of experienced financial advisors is dedicated to providing
+            expert guidance and support across a range of areas, including:
+          </p>
+          <ul>
+            <li>
+              Investment Management: Our investment management services are
+              designed to help clients achieve their long-term financial goals
+              by providing expert guidance and support across a range of
+              investment options.
+            </li>
+            <li>
+              Risk Assessment: We offer comprehensive risk assessment services
+              to help clients identify potential risks and develop strategies to
+              mitigate them.
+            </li>
+            <li>
+              Financial Planning: Our financial planning services are designed
+              to help clients develop and implement effective financial
+              strategies that align with their goals and objectives.
+            </li>
+            <li>
+              Business Advisory: Our business advisory services are tailored to
+              the unique needs of each client, providing expert guidance and
+              support across a range of areas, including strategic planning,
+              operational efficiency, and risk management.
+            </li>
+          </ul>
+
+          <p>
+            At Elite Capital Funding Group LLC, we are committed to providing
+            our clients with the highest level of service and support. We take
+            the time to understand each client's needs and objectives, and we
+            work closely with them to develop tailored solutions that help them
+            achieve their goals. Contact us today to learn more about our
+            advisory services and how we can help you achieve your financial
+            objectives.
+          </p>
+        </div>
+        <!-- /.service-details__content -->
+      </div>
+      <!-- /.col-lg-8 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.service-details -->
+
+<%- include('../layouts/footer') %>

@@ -1,0 +1,523 @@
+<%- include('../layouts/header') %>
+
+<section class="loan-Calculator pt-120">
+  <div class="container">
+    <div class="loan-calculator__box" id="home-eligibility-calculator">
+      <div class="loan-calculator__top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="block-title text-left">
+              <p class="block-title__tagline">loan eligibility calculator</p>
+              <!-- block-title__tagline -->
+              <h2 class="block-title__title">
+                How much do you need in funding?
+              </h2>
+              <!-- block-title__title-->
+            </div>
+            <!-- block-title -->
+          </div>
+          <!-- col-md-12 -->
+          <div class="col-md-6">
+            <p class="loan-calculator__top__text">
+              If you're a business owner or an individual in need of financial
+              assistance, Elite Capital Funding Group LLC offers a range of
+              lending and investment options that may be able to help. Our
+              eligibility requirements vary depending on the specific service
+              you're interested in, but in general, we look for clients who have
+              a strong credit history, a steady income or revenue stream, and a
+              sound business plan or investment strategy.
+            </p>
+            <!-- loan-calculator__top__text -->
+          </div>
+          <!-- /. col-md=12 -->
+        </div>
+      </div>
+      <div class="home-loan-eligible-slider-outer">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="slider-box">
+              <div class="main-slide">
+                <div class="single-loan-header">
+                  <h4>Age</h4>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="age"
+                    id="eligibility-age-input"
+                    readonly
+                    aria-readonly="true"
+                    onkeypress="return onlynumeric(event)"
+                  />
+                </div>
+                <!-- single-loan-header -->
+                <div
+                  id="eligibility-age-slider"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                    style="left: 31.0345%"
+                  ></span>
+                </div>
+                <!-- eligibility-age-slider -->
+                <div class="loan-counter-value">
+                  <h6 id="eligibility-age-show"></h6>
+                  <span>Years</span>
+                </div>
+                <!-- loan-counter-value -->
+              </div>
+              <!-- main-slide -->
+            </div>
+            <!-- slider-box -->
+          </div>
+          <!-- col-md-6 -->
+          <div class="col-md-6">
+            <div class="slider-box">
+              <div class="main-slide">
+                <div class="single-loan-header">
+                  <h4>Loan Years</h4>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="loanyear"
+                    readonly
+                    aria-readonly="true"
+                    id="eligibility-year-input"
+                    onkeypress="return onlynumeric(event)"
+                  />
+                </div>
+                <!-- single-loan-header -->
+                <div
+                  id="eligibility-year-slider"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                    style="left: 31.0345%"
+                  ></span>
+                </div>
+                <!-- eligibility-year-slider -->
+                <div class="loan-counter-value">
+                  <h6 id="eligibility-year-show"></h6>
+                  <span>Years</span>
+                </div>
+                <!-- loan-counter-value -->
+              </div>
+              <!-- main-slide -->
+            </div>
+            <!-- slider-box -->
+          </div>
+          <!-- col-md-6 -->
+          <div class="col-md-6">
+            <div class="slider-box">
+              <div class="main-slide">
+                <div class="single-loan-header">
+                  <h4>Monthly Income</h4>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="monthlyincome"
+                    readonly
+                    aria-readonly="true"
+                    id="eligibility-income-input"
+                    onkeypress="return onlynumeric(event)"
+                  />
+                </div>
+                <!-- single-loan-header -->
+                <div
+                  id="eligibility-income-slider"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                    style="left: 2.80361%"
+                  ></span>
+                </div>
+                <!-- eligibility-income-slider -->
+                <div class="loan-counter-value">
+                  <span>$</span>
+                  <h6 id="eligibility-income-show"></h6>
+                </div>
+                <!-- loan-counter-value -->
+              </div>
+              <!-- main-slide -->
+            </div>
+            <!-- slider-box -->
+          </div>
+          <!-- col-md-6 -->
+          <div class="col-md-6">
+            <div class="slider-box">
+              <div class="main-slide">
+                <div class="single-loan-header">
+                  <h4>Other EMIs (Monthly)</h4>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="otheremi"
+                    readonly
+                    aria-readonly="true"
+                    id="eligibility-other-input"
+                    onkeypress="return onlynumeric(event)"
+                  />
+                </div>
+                <!-- single-loan-header -->
+                <div
+                  id="eligibility-other-slider"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                    style="left: 48.7603%"
+                  ></span>
+                </div>
+                <!-- eligibility-other-slider -->
+                <div class="loan-counter-value">
+                  <span>$</span>
+                  <h6 id="eligibility-other-show"></h6>
+                </div>
+                <!-- loan-counter-value -->
+              </div>
+              <!-- main-slide -->
+            </div>
+            <!-- slider-box -->
+          </div>
+          <!-- col-md-6 -->
+          <div class="col-md-6">
+            <div class="slider-box">
+              <div class="main-slide">
+                <div class="single-loan-header">
+                  <h4>Interest Rate</h4>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="interestrate"
+                    readonly
+                    aria-readonly="true"
+                    id="eligibility-rate-input"
+                    onkeypress="return onlynumeric(event)"
+                  />
+                </div>
+                <!-- single-loan-header -->
+                <div
+                  id="eligibility-interest-slide"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                    style="left: 48.7603%"
+                  ></span>
+                </div>
+                <!-- eligibility-interest-slide -->
+                <div class="loan-counter-value">
+                  <h6 id="eligibility-interest-show"></h6>
+                  <span>%</span>
+                </div>
+                <!-- loan-counter-value -->
+              </div>
+              <!-- main-slide -->
+            </div>
+            <!-- slider-box -->
+          </div>
+          <!-- col-md-6 -->
+          <!-- <div class="col-md-6">
+                            <div class="eligibility-button">
+                                <a href="#" class="thm-btn" target="_blank" rel="nofollow">Check Eligibility</a>
+                            </div>
+                        </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="loan-calculation home-eligibility">
+            <div class="home-eligibility-loan total-loan-form">
+              <div class="home-eligibility-inner">
+                <h4>Loan Amount</h4>
+                <span id="total-amount"></span>
+                <h6>Do copy this to load amount in your application below</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="loan-calculation home-eligibility">
+            <div class="home-eligibility-loan total-loan-form">
+              <div class="home-eligibility-inner">
+                <h4>Emi</h4>
+                <span id="total-emi"></span>
+                <h6>Do copy this to load amount in your application below</h6>
+              </div>
+            </div>
+            <!-- loan-calculation-content -->
+          </div>
+          <!-- loan-calculation -->
+        </div>
+        <!-- col-md-6 -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- loan-calculator__box -->
+  </div>
+  <!-- container -->
+</section>
+<!-- loan-Calculator -->
+
+<section class="finloan-apply-one pt-120 pb-120">
+  <div class="container">
+    <form
+      action="apply-now.php"
+      method="post"
+      class="form-one contact-one__form"
+    >
+      <div class="contact-one__form-box">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block-title">
+              <p class="block-title__tagline">More Application Details</p>
+              <h2 class="block-title__title">Loan Details</h2>
+            </div>
+            <!-- /.block-title-->
+          </div>
+          <!-- /.col-md-12-->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Loan Amount*</label>
+              <input
+                class="form-control"
+                type="number"
+                name="loanamount"
+                placeholder="Loan Amount"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Monthly Income*</label>
+              <input
+                class="form-control"
+                type="number"
+                name="income"
+                placeholder="Monthly Income"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Purpose of Loan</label>
+              <select name="purposeloan" class="form-control" required="">
+                <option value="">Select Purpose of Loan</option>
+                <option value="Business">Business</option>
+                <option value="Home Purchase">Home Purchase</option>
+                <option value="Car Purchase">Car Purchase</option>
+                <option value="Holiday">Holiday</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Investment">Investment</option>
+                <option value="Payday Loan">Payday Loan</option>
+                <option value="Startup">Startup</option>
+                <option value="Other">Other</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Loan Years</label>
+              <select
+                id="loanyears"
+                name="loanyears"
+                class="form-control"
+                required=""
+              >
+                <option value="">Select Loan Year</option>
+                <option value="6 Months">6 Months</option>
+                <option value="1 Year">1 Year</option>
+                <option value="2 Years">2 Years</option>
+                <option value="3 Years">3 Years</option>
+                <option value="4 Years">4 Years</option>
+                <option value="5 Years">5 Years</option>
+                <option value="6 Years">6 Years</option>
+                <option value="7 Years">7 Years</option>
+                <option value="8 Years">8 Years</option>
+                <option value="9 Years">9 Years</option>
+                <option value="10 Years">10 Years</option>
+                <option value="11 Years">11 Years</option>
+                <option value="12 Years">12 Years</option>
+                <option value="13 Years">13 Years</option>
+                <option value="14 Years">14 Years</option>
+                <option value="15+ Years">15+ Years</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+        </div>
+        <!-- /.row-->
+      </div>
+      <!-- /.contact-one__form-box-->
+      <div class="contact-one__form-box">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block-title pt-50">
+              <p class="block-title__tagline">Ask for More Details</p>
+              <h2 class="block-title__title">Personal Details</h2>
+            </div>
+            <!-- /.block-title-->
+          </div>
+          <!-- /.col-md-12-->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Full Name*</label>
+              <input
+                class="form-control"
+                type="text"
+                name="yourname"
+                placeholder="Full Name"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Email*</label>
+              <input
+                class="form-control"
+                type="email"
+                name="your-email"
+                placeholder="Your Email"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Mobile Number*</label>
+              <input
+                class="form-control"
+                type="number"
+                name="phonenumber"
+                placeholder="Mobile Number"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Employer Status*</label>
+              <select name="employer_status" class="form-control" required="">
+                <option value="">Select Employer Status</option>
+                <option value="Full Time Employed">Business</option>
+                <option value="Part Time Employed">Self Employed</option>
+                <option value="Self Employed">Government Job</option>
+                <option value="Temporarily Employed">Private Job</option>
+                <option value="Student">Student</option>
+                <option value="Pension">Other</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- col-md-6 -->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Birth Date*</label>
+              <input
+                class="form-control"
+                type="text"
+                name="birthdate"
+                placeholder="Birth Date"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Taxpayer ID*</label>
+              <input
+                class="form-control"
+                type="number"
+                name="taxpayer"
+                placeholder="Taxpayer ID"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+        </div>
+        <!-- /.row-->
+      </div>
+      <!-- /.contact-one__form-box-->
+      <div class="contact-one__form-box">
+        <!-- /.row-->
+        <div class="row">
+          <div class="col-md-12">
+            <input type="submit" value="Submit" class="thm-btn btn-span" />
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- contact-one__form-box -->
+    </form>
+    <!-- /.contact-one__form-->
+  </div>
+  <!-- /.container-->
+</section>
+<!-- /.contact-one-->
+
+<%- include('../layouts/footer') %>

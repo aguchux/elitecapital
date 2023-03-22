@@ -1,0 +1,13 @@
+{
+    "crons": [
+      {
+        "path": "/crons",
+        "schedule": "0 2 */13 * *"
+      }
+    ],
+    "cleanUrls": true,
+    "installCommand": "npm install",
+    "outputDirectory": "build",
+    "trailingSlash": false
+  }
+  

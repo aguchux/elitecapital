@@ -1,0 +1,101 @@
+<div class="topbar">
+  <div class="container-fluid">
+    <div class="topbar__info">
+      <a href="#"><i class="icon-pin"></i> <%= settings.siteAddress %></a>
+      <a href="mailto:needhelp@company.com"
+        ><i class="icon-email"></i> <%= settings.siteEmail %></a
+      >
+    </div>
+    <!-- /.topbar__info -->
+    <div class="topbar__links">
+      <a href="/pages/login">Login</a>
+      <a href="/pages/contact-us">Contact Us</a>
+      <a href="/pages/faqs">FAQs</a>
+    </div>
+    <!-- /.topbar__links -->
+    <div class="topbar__social">
+      <a href="<%= settings.siteFacebook %>"><i class="fab fa-twitter"></i></a>
+      <a href="<%= settings.siteTwitter %>"><i class="fab fa-facebook"></i></a>
+      <a href="<%= settings.siteLinkedin %>"><i class="fab fa-linkedin"></i></a>
+      <a href="<%= settings.siteInstagram %>"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </div>
+    <!-- /.topbar__social -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.topbar -->
+<nav class="main-menu">
+  <div class="container-fluid">
+    <div class="main-menu__logo">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="main-menu__logo__shape-1"
+        viewbox="0 0 317 120"
+      >
+        <path d="M259.856,120H0V0H274l43,37.481Z"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="main-menu__logo__shape-2"
+        viewbox="0 0 317 120"
+      >
+        <path d="M259.856,120H0V0H274l43,37.481Z"></path>
+      </svg>
+      <a href="/">
+        <img
+          src="assets/images/logo-dark.png"
+          width="140"
+          height="51"
+          alt="Elite Capital Funding Group LLC"
+        />
+      </a>
+    </div>
+    <!-- /.main-menu__logo -->
+    <div class="main-menu__nav">
+      <ul class="main-menu__list">
+        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/pages/about-us">About Us</a>
+        </li>
+        <li>
+          <a href="/pages/core-services">Our Services</a>
+        </li>
+        <li><a href="/pages/advisory">Advisory</a></li>
+        <li><a href="/pages/vc-products">VC Products</a></li>
+        <li><a href="/pages/contact-us">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.main-menu__nav -->
+    <div class="main-menu__right">
+      <a href="#" class="main-menu__toggler mobile-nav__toggler">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#" class="main-menu__search search-toggler">
+        <i class="icon-magnifying-glass"></i>
+      </a>
+      <a href="/pages/apply-for-loan" class="thm-btn main-menu__btn"
+        >Request Loan</a
+      ><!-- /.thm-btn -->
+      <a href="tel:<%= settings.siteFirstMobile %>" class="main-menu__contact">
+        <span class="main-menu__contact__icon">
+          <i class="icon-phone"></i> </span
+        ><!-- /.main-menu__contact__icon -->
+        <span class="main-menu__contact__text">
+          <strong><%= settings.siteFirstMobile %></strong>
+          Mon to Fri: 9 am to 6 pm
+        </span> </a
+      ><!-- /.main-menu__contact -->
+    </div>
+    <!-- /.main-menu__right -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.main-menu -->
+
+<div class="stricky-header stricked-menu main-menu">
+  <div class="sticky-header__content"></div>
+  <!-- /.sticky-header__content -->
+</div>
+<!-- /.stricky-header -->

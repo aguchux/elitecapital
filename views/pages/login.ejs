@@ -1,0 +1,72 @@
+<%- include('../layouts/header') %>
+
+<section class="finloan-apply-one pb-120">
+  <div class="container">
+    <form
+      action="/forms/login"
+      method="post"
+      class="form-one contact-one__form"
+    >
+      <!-- /.contact-one__form-box-->
+      <div class="contact-one__form-box">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block-title pt-50">
+              <p class="block-title__tagline">Application Manager</p>
+              <h2 class="block-title__title">Member Login</h2>
+            </div>
+            <!-- /.block-title-->
+          </div>
+          <!-- /.col-md-12-->
+        </div>
+        <!-- /.row-->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Email*</label>
+              <input
+                class="form-control"
+                type="email"
+                name="your-email"
+                placeholder="Your Email"
+                required=""
+              />
+            </div>
+            <div class="form-group">
+              <label>Password*</label>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required=""
+              />
+            </div>
+            <!-- /.form-group-->
+          </div>
+          <!-- /.col-md-6-->
+          <div class="col-md-6"></div>
+          <!-- /.col-md-6-->
+        </div>
+        <!-- /.row-->
+      </div>
+      <!-- /.contact-one__form-box-->
+      <div class="contact-one__form-box">
+        <!-- /.row-->
+        <div class="row">
+          <div class="col-md-12">
+            <input type="submit" value="Submit" class="thm-btn btn-span" />
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- contact-one__form-box -->
+    </form>
+    <!-- /.contact-one__form-->
+  </div>
+  <!-- /.container-->
+</section>
+<!-- /.contact-one-->
+
+<%- include('../layouts/footer') %>
