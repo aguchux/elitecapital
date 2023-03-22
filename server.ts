@@ -96,7 +96,8 @@ server.get("/crons", async (req: Request, res: Response) => {
   res.send("Cron job running");
 });
 
-server.listen(3000, async () => {
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, async () => {
   // Prisma connection
   await prisma
     .$connect()
@@ -106,5 +107,5 @@ server.listen(3000, async () => {
     .catch((err) => {
       console.log(`Prisma error: ${err}`);
     });
-  console.log(`Server http://localhost:3000`);
+  console.log(`Server http://localhost:${PORT}`);
 });
