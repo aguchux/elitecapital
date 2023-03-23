@@ -13,9 +13,7 @@
         "schedule": "0 2 */13 * *"
       }
     ],
-    "cleanUrls": true,
     "installCommand": "npm install",
     "outputDirectory": "build",
-    "trailingSlash": false,
     "buildCommand": "npm build && prisma generate && prisma migrate deploy && npm start"
  }
