@@ -5,6 +5,7 @@ import cors from "cors";
 import ejs from "ejs";
 import path from "path";
 import { PrismaClient } from "@prisma/client";
+
 ejs.delimiter = "%";
 
 const prisma = new PrismaClient();
@@ -27,8 +28,27 @@ server.use(express.static(path.join(__dirname, "public")));
 server.use("/assets", express.static(path.join(__dirname, "public", "assets")));
 // middleware
 server.use(async (req: Request, res: Response, next: NextFunction) => {
-  const sitSettings = await prisma.settings.findFirst();
-  res.locals.settings = sitSettings;
+  res.locals.settings = {
+    siteUrl: "http://localhost:3000/",
+    siteName: "Elite Capital Funding Group LLC",
+    siteEmail: "info@elitecapital.com",
+    siteFirstMobile: "1-484-558-0162",
+    siteSecondMobile: "1-484-750-5611",
+    siteAddress: "4, Rexdale Blvd Etobicoke ON M9W 1N6, Canada",
+    siteLogo: "/images/logo.png",
+    siteTitle: "Elite Capital Funding Group LLC",
+    siteFooterTitle:
+      "Elite Capital Funding Group LLC is a loan, investment, and venture capital firm that provides funding options for businesses and individuals.",
+    siteDescription:
+      "Elite Capital Funding Group LLC is a loan, investment, and venture capital firm that provides funding options for businesses and individuals. Contact us today to learn more about our flexible repayment terms and competitive interest rates.",
+    siteKeywords:
+      "business loans, personal loans, investment services, venture capital funding, loan options, flexible repayment terms, competitive interest rates, SBA loans, commercial real estate loans, equipment financing, merchant cash advances, personal lines of credit, installment loans, payday loans, stocks, bonds, mutual funds, investment strategies, portfolio management, entrepreneurship, startup funding, experienced advisors",
+    siteFacebook: "#",
+    siteTwitter: "#",
+    siteInstagram: "#",
+    siteLinkedin: "#",
+    siteYouTubeVideo: "C_sOMVv93-E",
+  };
   next();
 });
 
@@ -98,14 +118,5 @@ server.get("/crons", async (req: Request, res: Response) => {
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, async () => {
-  // Prisma connection
-  await prisma
-    .$connect()
-    .then(() => {
-      console.log(`Prisma connected`);
-    })
-    .catch((err) => {
-      console.log(`Prisma error: ${err}`);
-    });
   console.log(`Server http://localhost:${PORT}`);
 });
