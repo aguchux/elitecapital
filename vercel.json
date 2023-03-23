@@ -15,5 +15,5 @@
     ],
     "installCommand": "npm install",
     "outputDirectory": "build",
-    "buildCommand": "npm run build && prisma generate && prisma migrate deploy"
+    "buildCommand": "npm run build && npm start"
  }
