@@ -29,7 +29,7 @@ server.use("/assets", express.static(path.join(__dirname, "public", "assets")));
 // middleware
 server.use(async (req: Request, res: Response, next: NextFunction) => {
   res.locals.settings = {
-    siteUrl: "https://elitecapital.vercel.app/",
+    siteUrl: "https://ecfgllc.com/",
     siteName: "Elite Capital Funding Group LLC",
     siteEmail: "info@elitecapital.com",
     siteFirstMobile: "1-484-558-0162",
