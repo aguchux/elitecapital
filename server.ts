@@ -116,6 +116,10 @@ server.get("/crons", async (req: Request, res: Response) => {
   res.send("Cron job running");
 });
 
+server.get("/sitemap", async (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "sitemap.xml"));
+});
+
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, async () => {
   console.log(`Server http://localhost:${PORT}`);
