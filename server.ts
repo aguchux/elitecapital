@@ -27,6 +27,7 @@ server.use(express.static(path.join(__dirname, "public")));
 // add assets folder in public folder
 server.use("/assets", express.static(path.join(__dirname, "public", "assets")));
 // middleware
+
 server.use(async (req: Request, res: Response, next: NextFunction) => {
   res.locals.settings = {
     siteUrl: "https://ecfgllc.com/",
@@ -34,7 +35,9 @@ server.use(async (req: Request, res: Response, next: NextFunction) => {
     siteEmail: "info@ecfgllc.com",
     siteFirstMobile: "1-484-558-0162",
     siteSecondMobile: "1-484-750-5611",
+    siteFax: "1-484-750-5611",
     siteAddress: "4, Rexdale Blvd Etobicoke ON M9W 1N6, Canada",
+    siteAddress2: "",
     siteLogo: "/images/logo.png",
     siteTitle: "Elite Capital Funding Group LLC",
     siteFooterTitle:
